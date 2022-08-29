@@ -1,20 +1,33 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package coversormonedas;
+
+import javax.swing.JOptionPane;
 
 /**
  *
- * @author Laborato
+ * @author Merliques
  */
 public class CoversorMonedas {
 
-    /**
-     * @param args the command line arguments
-     */
+   
     public static void main(String[] args) {
-        // TODO code application logic here
+       
+        //Conversor de monedas
+        
+        //atributos
+        
+        double pesos;
+        double dolares;
+              
+       
+        
+        String[] opciones = { "Monedas","Temperaturas","Presiones" };
+        String opcion = (String) JOptionPane.showInputDialog(null, "Seleccione conversor ...",
+        "Conversor Universal", JOptionPane.QUESTION_MESSAGE, null,opciones,opciones[0]);
+        
+        JOptionPane.showMessageDialog(null,"Ud selecciono la opcion : "+ opcion);
+        
     }
+    
     
 }
