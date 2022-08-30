@@ -17,10 +17,13 @@ public class CoversorMonedas {
         //atributos
         
         double pesos;
-        double dolarHoy = 292.50;
+        double pesosConvertidos;
+        
+        //cotizaciones de las monedas en Argentina
+        double dolarHoy = 292.50; 
         double euroHoy = 138.50;
         double realHoy = 27.50;
-        double pesosDolares;
+        
               
        
         
@@ -42,8 +45,8 @@ public class CoversorMonedas {
             
             if(opcionMoneda == "Dolares"){
                 
-                pesos = Double.parseDouble(JOptionPane.showInputDialog(null,"Ingresa la cantidad de Pesos a convertir en "+opcionMoneda));
-            pesosDolares = pesos / dolarHoy;
+                pesos = Double.parseDouble(JOptionPane.showInputDialog(null,"Ingresa la cantidad de Pesos a convertir a "+opcionMoneda));
+            pesosConvertidos = pesos / dolarHoy;
             
            
           
@@ -51,14 +54,14 @@ public class CoversorMonedas {
             }else if(opcionMoneda == "Euros"){
                 
                 pesos = Double.parseDouble(JOptionPane.showInputDialog(null,"Ingresa la cantidad de Pesos a convertir en "+opcionMoneda));
-            pesosDolares = pesos / euroHoy;
+            pesosConvertidos = pesos / euroHoy;
           
             JOptionPane.showMessageDialog(null," la cantidad de $"+Math.round(pesos)+" equivalen a "+  Math.round(pesosDolares*100.0)/100.0+" Euros");
             
             }else{
                 
                  pesos = Double.parseDouble(JOptionPane.showInputDialog(null,"Ingresa la cantidad de Pesos a convertir en "+opcionMoneda));
-            pesosDolares = pesos / realHoy;
+            pesosConvertidos = pesos / realHoy;
           
             JOptionPane.showMessageDialog(null," la cantidad de $"+Math.round(pesos)+" equivalen a "+  Math.round(pesosDolares*100.0)/100.0+" Reales");
             
