@@ -17,7 +17,10 @@ public class CoversorMonedas {
         //atributos
         
         double pesos;
-        double dolares;
+        double dolarHoy = 292.50;
+        double euroHoy = 138.50;
+        double realHoy = 27.50;
+        double pesosDolares;
               
        
         
@@ -27,6 +30,38 @@ public class CoversorMonedas {
         
         JOptionPane.showMessageDialog(null,"Ud selecciono la opcion : "+ opcion);
         
+        
+        if(opcion == "Monedas"){
+            
+            //opciones de monedas convertibles
+            
+            String[] monedas = { "Dolares","Euros","Reales" };
+            
+            String opcionMoneda = (String) JOptionPane.showInputDialog(null, "Seleccione la Moneda a la que deseas convertir ...",
+        "Conversor Universal", JOptionPane.QUESTION_MESSAGE, null,monedas,monedas[0]);
+            
+            if(opcionMoneda == "Dolares"){
+                
+                pesos = Double.parseDouble(JOptionPane.showInputDialog(null,"Ingresa la cantidad de Pesos a convertir en "+opcionMoneda));
+            pesosDolares = pesos / dolarHoy;
+          
+            JOptionPane.showMessageDialog(null," la cantidad de $"+Math.round(pesos)+" equivalen a "+  Math.round(pesosDolares*100.0)/100.0+" Dolares");
+            }else if(opcionMoneda == "Euros"){
+                
+                pesos = Double.parseDouble(JOptionPane.showInputDialog(null,"Ingresa la cantidad de Pesos a convertir en "+opcionMoneda));
+            pesosDolares = pesos / euroHoy;
+          
+            JOptionPane.showMessageDialog(null," la cantidad de $"+Math.round(pesos)+" equivalen a "+  Math.round(pesosDolares*100.0)/100.0+" Euros");
+            
+            }else{
+                
+                 pesos = Double.parseDouble(JOptionPane.showInputDialog(null,"Ingresa la cantidad de Pesos a convertir en "+opcionMoneda));
+            pesosDolares = pesos / realHoy;
+          
+            JOptionPane.showMessageDialog(null," la cantidad de $"+Math.round(pesos)+" equivalen a "+  Math.round(pesosDolares*100.0)/100.0+" Reales");
+            
+            }
+        }
     }
     
     
