@@ -44,6 +44,8 @@ public class CoversorMonedas {
                 
                 pesos = Double.parseDouble(JOptionPane.showInputDialog(null,"Ingresa la cantidad de Pesos a convertir en "+opcionMoneda));
             pesosDolares = pesos / dolarHoy;
+            
+           
           
             JOptionPane.showMessageDialog(null," la cantidad de $"+Math.round(pesos)+" equivalen a "+  Math.round(pesosDolares*100.0)/100.0+" Dolares");
             }else if(opcionMoneda == "Euros"){
